@@ -11,6 +11,10 @@ namespace RPNEvaluator
            
             string[] words = expression.Split(' ');
 
+            foreach (string word in words)
+            {
+                Console.WriteLine($"Line by line: '{word}'");
+            }
                 
 
 
