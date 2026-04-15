@@ -1,46 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace StringSplitter
-{
-    class StringSplitter
-    {
-        public static List<string> split_string(string expression)
-        {
-            
-            int length = expression.Length;
-            int i = 0;
-            List<string> spliced = new List<string>(); 
-            string to_add;
-
-            if (expression == "")
-            {
-                return spliced;
-            }
-
-            while (i < length) //Split by whitespace
-            {
-                to_add = "";
-                while (expression[i] == ' ') //Skip over double (or more) whitespaces
-                {
-                    i++;
-                }
-
-                while (expression[i] != ' ' && i < length) //While not at a space character add it to our string
-                {
-                    to_add += expression[i];
-                    i++;
-                }
-                spliced.Add(to_add); //Add string to end of array
-                i++;
-            }
-            return spliced;
-        }
-    }
-
-}
-
-
 namespace RPNEvaluator
 {
     class RPNEvaluator
@@ -49,7 +9,8 @@ namespace RPNEvaluator
         {
             Stack<int> num_stack = new Stack<int>();
            
-                
+            string[] words = expression.Split(' ');
+
                 
 
 
