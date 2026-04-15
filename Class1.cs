@@ -9,6 +9,8 @@ namespace RPNEvaluator
     {
         public static int Evaluate(string expression, Dictionary<string,int> dic)
         {
+            if (string.IsNullOrWhiteSpace(expression)) throw new ArgumentException("Expression cannot be empty.");
+
             Stack<int> num_stack = new Stack<int>();
            
             string[] split = expression.Split(' ', StringSplitOptions.RemoveEmptyEntries);
@@ -31,6 +33,7 @@ namespace RPNEvaluator
                     {
                         throw new DivideByZeroException($"Cannot {el} by zero.");
                     }
+                    
                     to_push = el switch //Do the operation
                     {
                         "+" => a + b,
@@ -55,10 +58,8 @@ namespace RPNEvaluator
                 }
                 else {throw new ArgumentException("Variable not found.");}
             }
-            if (num_stack.Count == 1) 
-            {
-                return num_stack.Pop();
-            } 
+            if (num_stack.Count == 1) {return num_stack.Pop();} 
+            
             else {throw new ArgumentException("Invalid RPN: Too many operands left.");}
         }
 
