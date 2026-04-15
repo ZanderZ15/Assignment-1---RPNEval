@@ -11,7 +11,7 @@ namespace RPNEvaluator
         {
             Stack<int> num_stack = new Stack<int>();
            
-            string[] split = expression.Split(' ');
+            string[] split = expression.Split(' ', StringSplitOptions.RemoveEmptyEntries);
             string[] operators = ["+", "-", "*", "/", "%"];
             
 
@@ -20,9 +20,25 @@ namespace RPNEvaluator
                 int to_push;
                 if (operators.Contains(el)) 
                 {
+                    int a, b;
                     //Pop top two numbers from stack into a and b
-                    int a = num_stack.Pop();
-                    int b = num_stack.Pop();
+                    if (num_stack.Count < 2) throw new ArgumentException("Invalid RPN: Not enough operands.");
+                    
+                    b = num_stack.Pop();
+                    a = num_stack.Pop();
+                    
+                    if (b == 0)
+                    {
+                        to_push = el switch //Do the operation
+                    {
+                        "+" => a,
+                        "-" => a,
+                        "*" => 0,
+                        "/" => throw new InvalidOperationException("Err: Cannot divide by zero."),
+                        "%" => throw new InvalidOperationException("Err: Cannot modulus by zero."),
+                        _ => throw new InvalidOperationException()
+                    }; 
+                    }
 
                     to_push = el switch //Do the operation
                     {
@@ -41,22 +57,21 @@ namespace RPNEvaluator
                     //push to stack
                     num_stack.Push(to_push);
                 }
-                else if () //check if its a var
+                else if (dic.TryGetValue(el, out to_push))//should only ever be a var otherwise but check anyways
                 {
-                    //lookup the var in dictionary
+                    //push the value in the dictionary
+                    num_stack.Push(to_push);
+                }
+                else
+                {
+                    continue;
                 }
             }
-
-
-                /*
-                if (isInt(indv - '0'))
-                {
-                    
-                }
-                indv = expression[i];
-                */
-            
-            return 0;
+            if (num_stack.Count == 1) 
+            {
+                return num_stack.Pop();
+            } 
+            else {throw new ArgumentException("Invalid RPN: Too many operands left.");}
         }
 
         public static float Evaluatef(string expression, Dictionary<string,float> dic)
