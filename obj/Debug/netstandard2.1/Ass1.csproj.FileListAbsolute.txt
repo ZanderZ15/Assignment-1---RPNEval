@@ -1,0 +1,10 @@
+C:\Users\zande\Desktop\Ass1\bin\Debug\netstandard2.1\Ass1.deps.json
+C:\Users\zande\Desktop\Ass1\bin\Debug\netstandard2.1\Ass1.dll
+C:\Users\zande\Desktop\Ass1\bin\Debug\netstandard2.1\Ass1.pdb
+C:\Users\zande\Desktop\Ass1\obj\Debug\netstandard2.1\Ass1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zande\Desktop\Ass1\obj\Debug\netstandard2.1\Ass1.AssemblyInfoInputs.cache
+C:\Users\zande\Desktop\Ass1\obj\Debug\netstandard2.1\Ass1.AssemblyInfo.cs
+C:\Users\zande\Desktop\Ass1\obj\Debug\netstandard2.1\Ass1.csproj.CoreCompileInputs.cache
+C:\Users\zande\Desktop\Ass1\obj\Debug\netstandard2.1\Ass1.sourcelink.json
+C:\Users\zande\Desktop\Ass1\obj\Debug\netstandard2.1\Ass1.dll
+C:\Users\zande\Desktop\Ass1\obj\Debug\netstandard2.1\Ass1.pdb
