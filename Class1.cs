@@ -7,21 +7,32 @@ namespace StringSplitter
     {
         public static List<string> split_string(string expression)
         {
-             int i = 0;
-            char indv = ' ';
+            
+            int length = expression.Length;
+            int i = 0;
             List<string> spliced = new List<string>(); 
             string to_add;
 
-            while (expression[i] != '\0') //Split by whitespace
+            if (expression == "")
+            {
+                return spliced;
+            }
+
+            while (i < length) //Split by whitespace
             {
                 to_add = "";
-                while (indv != ' ' || indv != '\0') //While not at a space character add it to our string
+                while (expression[i] == ' ') //Skip over double (or more) whitespaces
                 {
-                    indv = expression[i];
-                    to_add += indv;
+                    i++;
+                }
+
+                while (expression[i] != ' ' && i < length) //While not at a space character add it to our string
+                {
+                    to_add += expression[i];
                     i++;
                 }
                 spliced.Add(to_add); //Add string to end of array
+                i++;
             }
             return spliced;
         }
