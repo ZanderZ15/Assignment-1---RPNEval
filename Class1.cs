@@ -13,18 +13,35 @@ namespace RPNEvaluator
            
             string[] split = expression.Split(' ');
             string[] operators = ["+", "-", "*", "/", "%"];
+            
 
-            foreach (string el in split)
+            foreach (string el in split) //iterate
             {
-                if (operators.Contains(el)) //check if its an op
+                int to_push;
+                if (operators.Contains(el)) 
                 {
-                    //do the operation
+                    //Pop top two numbers from stack into a and b
+                    int a = num_stack.Pop();
+                    int b = num_stack.Pop();
+
+                    to_push = el switch //Do the operation
+                    {
+                        "+" => a + b,
+                        "-" => a - b,
+                        "*" => a * b,
+                        "/" => a / b,
+                        "%" => a % b,
+                        _ => throw new InvalidOperationException()
+                    }; 
+                    //Push result to stack
+                    num_stack.Push(to_push);
                 }
-                if () //check if its a number
+                else if (int.TryParse(el, out to_push)) //check if its a number; Also writes the number to to_push if number
                 {
                     //push to stack
+                    num_stack.Push(to_push);
                 }
-                if () //check if its a var
+                else if () //check if its a var
                 {
                     //lookup the var in dictionary
                 }
