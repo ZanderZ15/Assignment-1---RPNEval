@@ -27,19 +27,10 @@ namespace RPNEvaluator
                     b = num_stack.Pop();
                     a = num_stack.Pop();
                     
-                    if (b == 0)
+                    if (b == 0 && (el == "/" || el == "%")) //Check for / or % by 0
                     {
-                        to_push = el switch //Do the operation
-                    {
-                        "+" => a,
-                        "-" => a,
-                        "*" => 0,
-                        "/" => throw new InvalidOperationException("Err: Cannot divide by zero."),
-                        "%" => throw new InvalidOperationException("Err: Cannot modulus by zero."),
-                        _ => throw new InvalidOperationException()
-                    }; 
+                        throw new DivideByZeroException($"Cannot {el} by zero.");
                     }
-
                     to_push = el switch //Do the operation
                     {
                         "+" => a + b,
@@ -62,10 +53,7 @@ namespace RPNEvaluator
                     //push the value in the dictionary
                     num_stack.Push(to_push);
                 }
-                else
-                {
-                    continue;
-                }
+                else {throw new ArgumentException("Variable not found.");}
             }
             if (num_stack.Count == 1) 
             {
