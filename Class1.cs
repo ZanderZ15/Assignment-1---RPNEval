@@ -5,10 +5,11 @@ using System.Linq.Expressions;
 
 namespace RPNEvaluator
 {
-    class RPNEvaluator
+    public class RPNEvaluator
     {
         public static int Evaluate(string expression, Dictionary<string,int> dic)
         {
+            dic ??= new Dictionary<string, int>(); //in case no dic was passed
             if (string.IsNullOrWhiteSpace(expression)) throw new ArgumentException("Expression cannot be empty.");
 
             Stack<int> num_stack = new Stack<int>();
