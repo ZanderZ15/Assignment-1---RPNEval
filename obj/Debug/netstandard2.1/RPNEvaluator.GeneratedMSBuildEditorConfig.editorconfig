@@ -1,6 +1,6 @@
 is_global = true
-build_property.RootNamespace = Ass1
-build_property.ProjectDir = C:\Users\zande\Desktop\Ass1\
+build_property.RootNamespace = RPNEvaluator
+build_property.ProjectDir = C:\Users\zande\Desktop\RPNEvaluator\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTUseWindowsUIXamlProjections = false

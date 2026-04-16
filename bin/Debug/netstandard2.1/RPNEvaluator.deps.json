@@ -7,15 +7,15 @@
   "targets": {
     ".NETStandard,Version=v2.1": {},
     ".NETStandard,Version=v2.1/": {
-      "Ass1/1.0.0": {
+      "RPNEvaluator/1.0.0": {
         "runtime": {
-          "Ass1.dll": {}
+          "RPNEvaluator.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "Ass1/1.0.0": {
+    "RPNEvaluator/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
