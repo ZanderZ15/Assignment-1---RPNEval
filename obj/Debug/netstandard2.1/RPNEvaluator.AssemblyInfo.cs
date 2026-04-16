@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RPNEvaluator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cc080d8293e89784e973f2448daffd1eaa949365")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0c0ac5b8c217c7500b86da6ad708ace8c4f5b266")]
 [assembly: System.Reflection.AssemblyProductAttribute("RPNEvaluator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RPNEvaluator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

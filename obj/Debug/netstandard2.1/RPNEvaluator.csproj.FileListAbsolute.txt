@@ -1,10 +1,10 @@
-C:\Users\zande\Desktop\RPNEvaluator\bin\Debug\netstandard2.1\RPNEvaluator.deps.json
-C:\Users\zande\Desktop\RPNEvaluator\bin\Debug\netstandard2.1\RPNEvaluator.dll
-C:\Users\zande\Desktop\RPNEvaluator\bin\Debug\netstandard2.1\RPNEvaluator.pdb
 C:\Users\zande\Desktop\RPNEvaluator\obj\Debug\netstandard2.1\RPNEvaluator.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\zande\Desktop\RPNEvaluator\obj\Debug\netstandard2.1\RPNEvaluator.AssemblyInfoInputs.cache
 C:\Users\zande\Desktop\RPNEvaluator\obj\Debug\netstandard2.1\RPNEvaluator.AssemblyInfo.cs
 C:\Users\zande\Desktop\RPNEvaluator\obj\Debug\netstandard2.1\RPNEvaluator.csproj.CoreCompileInputs.cache
 C:\Users\zande\Desktop\RPNEvaluator\obj\Debug\netstandard2.1\RPNEvaluator.sourcelink.json
+C:\Users\zande\Desktop\RPNEvaluator\bin\Debug\netstandard2.1\RPNEvaluator.deps.json
+C:\Users\zande\Desktop\RPNEvaluator\bin\Debug\netstandard2.1\RPNEvaluator.dll
+C:\Users\zande\Desktop\RPNEvaluator\bin\Debug\netstandard2.1\RPNEvaluator.pdb
 C:\Users\zande\Desktop\RPNEvaluator\obj\Debug\netstandard2.1\RPNEvaluator.dll
 C:\Users\zande\Desktop\RPNEvaluator\obj\Debug\netstandard2.1\RPNEvaluator.pdb
